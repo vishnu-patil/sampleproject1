@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance Charges Prediction</title>
+</head>
+
+<body style="background-color: rgb(189, 226, 228);">
+    <center>
+        <h1> Medical Insurance Charges Prediction </h1>
+        <form method="get" action="/insurance">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3 style="color:rgb(197, 70, 165);">Get Your Medical Insurance In Single Click</h3>
+            </div>
+    
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <label for="age" style="color:Tomato;">Your Age</label><br>
+                <input type="number" min="0" placeholder="Enter Age" name="age" required>
+                <br><br>
+                <label for="sex" style="color:Tomato;">Your Gender</label><br>
+                <select placeholder="Enter Gender" name="sex" style="width: 180px;" required>
+                  <option></option>
+                  <option value = "male">male</option>
+                  <option value = "female">female</option>
+                </select>
+                <br><br>
+                <label for="bmi" style="color:Tomato;">Your BMI</label><br>
+                <input type="number" min="0" placeholder="Enter BMI" name="bmi" required>
+                <br><br>
+                <label for="children" style="color:Tomato;">No. Of Childrens</label><br>
+                <input type="number" min="0" placeholder="Enter No. Of Children" name="children" required>
+                <br><br>
+                <label for="smoker" style="color:Tomato;">Are You Smoker</label><br>
+                <select placeholder="Smoking" name="smoker" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "yes">yes</option>
+                    <option value = "no">no</option>
+                </select>
+                <br><br>
+                <label for="region" style="color:Tomato;">Your Region</label><br>
+                <select placeholder="Enter Region" name="region" style="width: 180px;" required>
+                    <option></option>
+                    <option value = "northeast">northeast</option>
+                    <option value = "southeast">southeast</option>
+                    <option value = "northwest">northwest</option>
+                    <option value = "southwest">southwest</option>
+                </select>
+    
+                <br><br>
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+                <br><br>
+                <h3 style="color:orange;">Your insurance premium charges will be <b style="color: black;"> {{ prediction }} /- Rs.</b> Only </h3>
+            </div>
+        </form>
+    </center>
+    
+
+
+</body>
+</html>
